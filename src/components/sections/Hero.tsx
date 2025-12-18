@@ -1,28 +1,57 @@
+"use client"
+
 import { siteContent } from "@/content/site"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 export function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-gradient-to-br from-blue-50 to-white">
-            {/* Background decorations */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-100/20 blur-3xl -translate-y-1/2 translate-x-1/3 rounded-full" />
-            <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-indigo-100/30 blur-3xl translate-y-1/3 -translate-x-1/4 rounded-full" />
+        <section className="relative min-h-[90vh] flex items-center pt-16 overflow-hidden bg-gradient-to-b from-blue-50/50 to-white">
+            {/* Background decorations - symmetric now */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-blue-100/20 blur-[100px] rounded-full"
+            />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-                <div className="max-w-3xl">
-                    <h1 className="text-5xl md:text-7xl font-extrabold text-blue-900 tracking-tight leading-tight mb-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+                <div className="max-w-4xl mx-auto flex flex-col items-center">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="text-5xl md:text-7xl font-extrabold text-blue-900 tracking-tight leading-tight mb-8"
+                    >
                         {siteContent.hero.title}
-                    </h1>
-                    <p className="text-xl md:text-2xl text-blue-800 font-light mb-8 leading-relaxed max-w-2xl">
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        className="text-xl md:text-3xl text-blue-600 font-medium mb-8 leading-relaxed max-w-3xl"
+                    >
                         {siteContent.hero.subtitle}
-                    </p>
-                    <p className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
+                    </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl leading-relaxed"
+                    >
                         {siteContent.hero.description}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <Button size="lg">{siteContent.hero.cta}</Button>
-                        <Button size="lg" variant="outline">Watch Video</Button>
-                    </div>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                        className="flex flex-col sm:flex-row gap-6 justify-center"
+                    >
+                        <Button size="lg" className="px-8 text-lg h-12 shadow-blue-500/20 shadow-xl hover:scale-105 transition-transform duration-300">{siteContent.hero.cta}</Button>
+                        <a href="#media">
+                            <Button size="lg" variant="outline" className="px-8 text-lg h-12 bg-white/50 backdrop-blur-sm hover:bg-white hover:scale-105 transition-all duration-300">Watch Video</Button>
+                        </a>
+                    </motion.div>
                 </div>
             </div>
         </section>

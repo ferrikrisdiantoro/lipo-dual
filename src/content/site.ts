@@ -71,12 +71,21 @@ export const siteContent = {
     },
     media: {
         title: "Innovation Video",
-        videoUrl: "https://www.youtube.com/watch?v=z0Ir7A61SAg"
+        videoUrl: "https://www.youtube.com/embed/z0Ir7A61SAg"
     },
     team: {
         title: "Our Team",
         members: [
-            { name: "Dr. Reza's Team", role: "Innovators", bio: "Dedicated to solving global health challenges through sustainable biotechnology." }
+            {
+                name: "Student Innovation Team",
+                role: "Innovators",
+                bio: "A student-led team participating in the Conrad Challenge, developing LipoDual as a sustainable biotechnology innovation for advanced wound healing."
+            },
+            {
+                name: "Dr. Reza, MD, SpKK",
+                role: "Clinical & Scientific Advisor",
+                bio: "Providing clinical mentorship and scientific guidance."
+            }
         ]
     },
     contact: {
