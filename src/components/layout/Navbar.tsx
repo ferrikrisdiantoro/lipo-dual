@@ -5,16 +5,16 @@ import { siteContent } from "@/content/site"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
-import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
     const navLinks = [
-        { href: "#problem", label: "Problem" },
+        { href: "#story", label: "Story" },
+        { href: "#model", label: "Model" },
         { href: "#solution", label: "Solution" },
-        { href: "#unique-value", label: "Innovation" },
-        { href: "#business", label: "Business" },
+        { href: "#brand", label: "Brand" },
         { href: "#team", label: "Team" },
     ]
 
@@ -23,8 +23,15 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="text-2xl font-bold text-blue-900">
-                            {siteContent.hero.title}
+                        <Link href="/" className="flex items-center gap-2">
+                            <Image
+                                src={siteContent.brand.logoPath}
+                                alt="LipoDual Logo"
+                                width={120}
+                                height={36}
+                                className="h-9 w-auto"
+                                priority
+                            />
                         </Link>
                     </div>
 
@@ -33,12 +40,12 @@ export function Navbar() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className="text-gray-600 hover:text-blue-900 transition-colors font-medium"
+                                className="text-gray-600 hover:text-purple-700 transition-colors font-medium"
                             >
                                 {link.label}
                             </Link>
                         ))}
-                        <Button>{siteContent.hero.cta}</Button>
+                        <Button className="bg-purple-600 hover:bg-purple-700">{siteContent.hero.cta}</Button>
                     </div>
 
                     <div className="md:hidden flex items-center">
@@ -60,14 +67,14 @@ export function Navbar() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md"
+                                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-700 hover:bg-purple-50 rounded-md"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.label}
                             </Link>
                         ))}
                         <div className="px-3 py-2">
-                            <Button className="w-full">{siteContent.hero.cta}</Button>
+                            <Button className="w-full bg-purple-600 hover:bg-purple-700">{siteContent.hero.cta}</Button>
                         </div>
                     </div>
                 </div>
@@ -75,3 +82,4 @@ export function Navbar() {
         </nav>
     )
 }
+

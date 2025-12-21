@@ -5,6 +5,24 @@ export const siteContent = {
         description: "LipoDual is a dual-miRNA soybean hydrogel innovation designed to accelerate wound healing through gene-level precision in a sustainable, plant-based system.",
         cta: "View Innovation"
     },
+    story: {
+        title: "Our Story",
+        intro: "LipoDual was born from a student-led mission to revolutionize wound care using sustainable biotechnology and cutting-edge gene therapy.",
+        mission: {
+            title: "Mission",
+            description: "To accelerate wound healing through innovative miRNA-based therapy delivered via sustainable, plant-derived materials."
+        },
+        vision: {
+            title: "Vision",
+            description: "A world where chronic wounds heal faster, reducing patient suffering and healthcare costs through precision biotechnology."
+        },
+        values: [
+            { title: "Innovation", description: "Pushing boundaries with dual-miRNA gene therapy." },
+            { title: "Sustainability", description: "Using eco-friendly soybean-based hydrogels." },
+            { title: "Accessibility", description: "Making advanced wound care available globally." }
+        ],
+        videoUrl: "https://www.youtube.com/embed/z0Ir7A61SAg"
+    },
     problem: {
         title: "The Challenge: Chronic Wounds",
         description: "Chronic wounds and diabetic ulcers represent a significant global health burden, often leading to severe complications due to ineffective healing processes.",
@@ -23,6 +41,17 @@ export const siteContent = {
             { title: "Gene-Level Precision", description: "Delivers therapeutic RNA directly to cells to reset the healing cycle." }
         ]
     },
+    model: {
+        title: "Innovation Model",
+        description: "How LipoDual works: a 4-step mechanism combining soybean hydrogel with dual-miRNA liposomes for accelerated wound healing.",
+        steps: [
+            { step: 1, title: "Soybean Hydrogel Scaffold", description: "A biodegradable, plant-based matrix provides structure and moisture retention." },
+            { step: 2, title: "Dual Liposome Loading", description: "Two types of liposomes carry miR-21 and miR-29b for dual-action therapy." },
+            { step: 3, title: "Protected Delivery", description: "Sustained release protects miRNAs from degradation while ensuring gradual absorption." },
+            { step: 4, title: "Gene Modulation & Healing", description: "Target genes are modulated to reduce inflammation and accelerate tissue regeneration." }
+        ],
+        diagramPath: "/diagrams/lipodual-model.svg"
+    },
     uniqueValue: {
         title: "Unique Value & Sustainability",
         description: "LipoDual stands out through its innovative use of plant-based materials and genetic precision.",
@@ -31,6 +60,22 @@ export const siteContent = {
             { title: "Eco-Friendly", description: "Utilizes soybean-derived hydrogel, reducing reliance on synthetic polymers and animal-derived collagen." },
             { title: "Difficult to Replicate", description: "The specific dual-miRNA combination and the novel soybean cross-linking process create a proprietary competitive barrier." }
         ]
+    },
+    brand: {
+        title: "Brand Identity",
+        name: "LipoDual",
+        meaning: "The name 'LipoDual' combines 'Lipo' (liposome delivery system) with 'Dual' (dual-miRNA action), representing our innovative approach to wound healing through dual-action gene therapy.",
+        tagline: "Dual-Action. Gene-Level. Sustainable.",
+        colors: {
+            primary: { name: "Purple", hex: "#7C3AED", meaning: "Innovation, biotechnology, precision medicine" },
+            accent: { name: "Green", hex: "#10B981", meaning: "Sustainability, healing, plant-based origins" },
+            neutral: { name: "White/Gray", hex: "#FAFAFA", meaning: "Clinical cleanliness, professionalism" }
+        },
+        typography: {
+            primary: "Geist Sans",
+            description: "A modern, professional sans-serif typeface suitable for scientific and medical contexts."
+        },
+        logoPath: "/brand/lipodual-logo.svg"
     },
     technology: {
         title: "How It Works",
@@ -92,3 +137,4 @@ export const siteContent = {
         email: "contact@lipodual.com"
     }
 }
+

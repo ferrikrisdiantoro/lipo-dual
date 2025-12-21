@@ -2,6 +2,7 @@
 
 import { siteContent } from "@/content/site"
 import { FadeIn } from "@/components/ui/fade-in"
+import { User } from "lucide-react"
 
 export function Technology() {
     return (
@@ -15,7 +16,7 @@ export function Technology() {
 
                 <div className="relative">
                     {/* Timeline line */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-blue-200 hidden md:block" />
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-purple-200 hidden md:block" />
 
                     <div className="space-y-16">
                         {siteContent.technology.steps.map((step, index) => (
@@ -23,11 +24,11 @@ export function Technology() {
                                 <div className={`flex flex-col md:flex-row items-center justify-between ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                                     <div className="w-full md:w-5/12 ml-auto" /> {/* Spacer */}
 
-                                    <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10 flex items-center justify-center text-white font-bold mb-4 md:mb-0 relative md:absolute md:left-1/2 md:-translate-x-1/2 transform transition-transform hover:scale-110">
+                                    <div className="flex-shrink-0 w-10 h-10 bg-purple-600 rounded-full border-4 border-white shadow-lg z-10 flex items-center justify-center text-white font-bold mb-4 md:mb-0 relative md:absolute md:left-1/2 md:-translate-x-1/2 transform transition-transform hover:scale-110">
                                         {index + 1}
                                     </div>
 
-                                    <div className="w-full md:w-5/12 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center md:text-left hover:shadow-lg transition-shadow duration-300">
+                                    <div className="w-full md:w-5/12 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center md:text-left hover:shadow-lg hover:border-purple-200 transition-all duration-300">
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                                         <p className="text-gray-600">{step.description}</p>
                                     </div>
@@ -51,18 +52,15 @@ export function Team() {
                     </h2>
                 </FadeIn>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                     {siteContent.team.members.map((member, index) => (
                         <FadeIn key={index} delay={index * 0.1}>
                             <div className="text-center group">
-                                <div className="w-32 h-32 mx-auto bg-gray-200 rounded-full mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                    {/* Placeholder for avatar */}
-                                    <div className="w-full h-full flex items-center justify-center text-gray-400 bg-gray-100">
-                                        <span className="text-3xl font-light">?</span>
-                                    </div>
+                                <div className="w-32 h-32 mx-auto bg-gradient-to-br from-purple-100 to-emerald-100 rounded-full mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                                    <User size={48} className="text-purple-400" />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                                <p className="text-blue-600 font-medium mb-3">{member.role}</p>
+                                <p className="text-purple-600 font-medium mb-3">{member.role}</p>
                                 <p className="text-gray-500 text-sm max-w-xs mx-auto">{member.bio}</p>
                             </div>
                         </FadeIn>
@@ -72,3 +70,4 @@ export function Team() {
         </section>
     )
 }
+

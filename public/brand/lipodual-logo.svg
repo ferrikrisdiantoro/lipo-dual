@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Dual circles representing dual-action liposome -->
+  <circle cx="25" cy="30" r="20" fill="#7C3AED" opacity="0.9"/>
+  <circle cx="40" cy="30" r="20" fill="#10B981" opacity="0.8"/>
+  
+  <!-- Wordmark -->
+  <text x="70" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#5B21B6">
+    Lipo<tspan fill="#10B981">Dual</tspan>
+  </text>
+</svg>
